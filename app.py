@@ -344,10 +344,7 @@ with col_logs:
         )
 
     if ss.running:
-        if not VENV_PYTEST.exists():
-            st.error(f"pytest not found at {VENV_PYTEST}. Please ensure the virtual environment is set up.")
-            ss.running = False
-            st.stop()
+        
         if ss.process is None:
             ss.running = False
             st.rerun()
